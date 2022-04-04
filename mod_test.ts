@@ -1,8 +1,8 @@
-import { assertStringIncludes } from "https://deno.land/std@0.97.0/testing/asserts.ts";
+import { assertStringIncludes } from "https://deno.land/std@0.133.0/testing/asserts.ts";
 import appPaths from "./mod.ts";
 
-Deno.test("make sure it didnt throw any error", () => {
-  const random = Math.random().toString(36).substr(2);
+Deno.test("that it throws no errors", () => {
+  const random = Math.random().toString(36).slice(2);
   const appName = `com.yourorg.yourapp-${random}`;
 
   const paths = appPaths(appName);
