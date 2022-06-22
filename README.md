@@ -5,8 +5,8 @@ appropriate paths for storing `data`, `cache`, `config`, `log` and `temp` files
 on macOS, Linux, and Windows.
 
 Please note that this library does not create any paths that don't yet exist.
-You can make use of the [fs](https://deno.land/std@0.133.0/fs#ensuredir)
-`ensureDire` and [path](https://deno.land/std@0.133.0/path) `join` STDLIB
+You can make use of the [fs](https://deno.land/std@0.144.0/fs#ensuredir)
+`ensureDire` and [path](https://deno.land/std@0.144.0/path) `join` STDLIB
 functions to help you with that.
 
 By convention the `appName` namespace you provide should be specified in
@@ -29,9 +29,9 @@ interface Paths
 ## Usage
 
 ```ts
-import appPaths from "https://raw.githubusercontent.com/truestamp/deno-app-paths/v1.0.1/mod.ts";
+import { appPaths } from "https://raw.githubusercontent.com/truestamp/deno-app-paths/v1.0.1/mod.ts";
 
-// Specifiy an app namespace
+// Specify an app namespace
 const paths = appPaths("com.yourorg.yourapp");
 
 console.log(paths);
@@ -48,4 +48,10 @@ console.log(paths.config);
 
 console.log(paths.data);
 // "/Users/USERNAME/Library/Application Support/com.yourorg.yourapp"
+```
+
+## Testing
+
+```sh
+deno task test
 ```
