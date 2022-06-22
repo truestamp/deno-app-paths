@@ -29,7 +29,7 @@ interface Paths
 ## Usage
 
 ```ts
-import { appPaths } from "https://raw.githubusercontent.com/truestamp/deno-app-paths/v1.0.1/mod.ts";
+import { appPaths } from "https://raw.githubusercontent.com/truestamp/deno-app-paths/v1.1.0/mod.ts";
 
 // Specify an app namespace
 const paths = appPaths("com.yourorg.yourapp");
